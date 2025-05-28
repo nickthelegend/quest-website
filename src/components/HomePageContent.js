@@ -1,10 +1,10 @@
-"use client"; // IMPORTANT: This makes it a Client Component
+"use client" // IMPORTANT: This makes it a Client Component
 
-import Link from 'next/link';
-import Image from 'next/image';
-import { Button } from '@/components/ui/button';
-import MobileMockupsSection from './MobileMockupsSections.js'
-import { motion } from 'framer-motion'; // Import motion for animations
+import Link from "next/link"
+import Image from "next/image"
+import { Button } from "@/components/ui/button"
+import MobileMockupsSection from "./MobileMockupsSections.js"
+import { motion } from "framer-motion" // Import motion for animations
 
 // Define common variants for entrance animations
 const containerVariants = {
@@ -21,17 +21,17 @@ const containerVariants = {
       staggerChildren: 0.1,
     },
   },
-};
+}
 
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 100, damping: 20 } },
-};
+}
 
 const buttonVariants = {
   hidden: { opacity: 0, scale: 0.8 },
   visible: { opacity: 1, scale: 1, transition: { type: "spring", stiffness: 100, damping: 20, delay: 0.5 } },
-};
+}
 
 export default function HomePageContent() {
   return (
@@ -60,7 +60,7 @@ export default function HomePageContent() {
                 <motion.div
                   initial={{ rotate: 0 }}
                   animate={{ rotate: 360 }}
-                  transition={{ duration: 1.5, repeat: Infinity, ease: "linear" }}
+                  transition={{ duration: 1.5, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
                   className="w-10 h-10 rounded-xl bg-purple-600 flex items-center justify-center group-hover:bg-purple-500 transition-colors"
                 >
                   <div className="w-3 h-3 rounded-full bg-white" />
@@ -117,7 +117,8 @@ export default function HomePageContent() {
           viewport={{ once: true, amount: 0.3 }}
           className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
         >
-          <motion.div variants={itemVariants}
+          <motion.div
+            variants={itemVariants}
             className="inline-flex items-center rounded-full px-4 py-1 mb-8
           bg-purple-900/50 border border-purple-700/50
           shadow-[0_0_30px_-5px_rgba(147,51,234,0.5)]"
@@ -126,7 +127,10 @@ export default function HomePageContent() {
             <span className="text-sm text-purple-300">Currently Running on Algorand's testnet</span>
           </motion.div>
 
-          <motion.h1 variants={itemVariants} className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6">
+          <motion.h1
+            variants={itemVariants}
+            className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6"
+          >
             Complete quests,
             <br />
             earn <span className="text-purple-400">rewards.</span>
@@ -149,21 +153,22 @@ export default function HomePageContent() {
           </Link>
 
           {/* App Preview */}
-          <motion.div
-            variants={itemVariants}
-            className="relative max-w-5xl mx-auto mt-20 mb-0"
-          >
+          <motion.div variants={itemVariants} className="relative max-w-5xl mx-auto mt-20 mb-0">
             <div className="relative rounded-lg overflow-hidden">
               {/* Enhanced glow effect */}
               <div className="absolute inset-0 bg-purple-600/40 blur-[50px]" />
               <div className="absolute inset-0 bg-purple-500/20 blur-[100px]" />
-              <Image
-                src="/placeholder.svg?height=675&width=1200"
-                alt="AlgoQuest Mobile App"
-                width={1200}
-                height={675}
-                className="relative rounded-lg border border-white/10 shadow-2xl"
-              />
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="relative rounded-lg border border-white/10 shadow-2xl w-full h-auto"
+              >
+                <source src="/intro.mp4" type="video/mp4" />
+                <source src="/placeholder.webm" type="video/webm" />
+                Your browser does not support the video tag.
+              </video>
             </div>
           </motion.div>
         </motion.div>
@@ -279,15 +284,20 @@ export default function HomePageContent() {
         className="relative mt-0 bg-gradient-to-b from-purple-900/20 via-purple-950/30 to-transparent py-32"
       >
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.h2 variants={itemVariants} className="text-4xl sm:text-5xl font-bold tracking-tight text-white mb-4">Marketplace</motion.h2>
+          <motion.h2 variants={itemVariants} className="text-4xl sm:text-5xl font-bold tracking-tight text-white mb-4">
+            Marketplace
+          </motion.h2>
           <motion.p variants={itemVariants} className="text-lg text-gray-400 mb-12 max-w-2xl mx-auto">
-            Collect, trade, and mint unique NFT beasts with your quest tokens. Each beast comes with special
-            attributes and powers.
+            Collect, trade, and mint unique NFT beasts with your quest tokens. Each beast comes with special attributes
+            and powers.
           </motion.p>
 
           <motion.div variants={containerVariants} className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-10">
             {/* Beast Card 1 */}
-            <motion.div variants={itemVariants} className="relative group transition-transform duration-300 hover:scale-105">
+            <motion.div
+              variants={itemVariants}
+              className="relative group transition-transform duration-300 hover:scale-105"
+            >
               <div className="absolute inset-0 bg-purple-600/20 blur-xl group-hover:bg-purple-600/30 transition-colors duration-300" />
               <div className="relative bg-black/40 backdrop-blur-sm rounded-2xl p-6 border border-purple-500/20">
                 <div className="mb-4 relative aspect-square overflow-hidden rounded-xl">
@@ -311,7 +321,10 @@ export default function HomePageContent() {
             </motion.div>
 
             {/* Beast Card 2 */}
-            <motion.div variants={itemVariants} className="relative group transition-transform duration-300 hover:scale-105">
+            <motion.div
+              variants={itemVariants}
+              className="relative group transition-transform duration-300 hover:scale-105"
+            >
               <div className="absolute inset-0 bg-purple-600/20 blur-xl group-hover:bg-purple-600/30 transition-colors duration-300" />
               <div className="relative bg-black/40 backdrop-blur-sm rounded-2xl p-6 border border-purple-500/20">
                 <div className="mb-4 relative aspect-square overflow-hidden rounded-xl">
@@ -335,7 +348,10 @@ export default function HomePageContent() {
             </motion.div>
 
             {/* Beast Card 3 */}
-            <motion.div variants={itemVariants} className="relative group transition-transform duration-300 hover:scale-105">
+            <motion.div
+              variants={itemVariants}
+              className="relative group transition-transform duration-300 hover:scale-105"
+            >
               <div className="absolute inset-0 bg-purple-600/20 blur-xl group-hover:bg-purple-600/30 transition-colors duration-300" />
               <div className="relative bg-black/40 backdrop-blur-sm rounded-2xl p-6 border border-purple-500/20">
                 <div className="mb-4 relative aspect-square overflow-hidden rounded-xl">
@@ -379,12 +395,17 @@ export default function HomePageContent() {
       >
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-purple-600/30 via-purple-900/20 to-transparent rounded-3xl" />
         <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.h2 variants={itemVariants} className="text-4xl sm:text-5xl font-bold tracking-tight text-white mb-4">Join the quest.</motion.h2>
+          <motion.h2 variants={itemVariants} className="text-4xl sm:text-5xl font-bold tracking-tight text-white mb-4">
+            Join the quest.
+          </motion.h2>
           <motion.p variants={itemVariants} className="text-lg text-gray-400 mb-12">
             Start earning tokens, collecting beasts, and making learning a daily adventure.
           </motion.p>
 
-          <motion.div variants={itemVariants} className="bg-black/40 backdrop-blur-sm rounded-xl p-6 sm:p-8 border border-white/10 shadow-[0_0_50px_-12px_rgba(147,51,234,0.2)]">
+          <motion.div
+            variants={itemVariants}
+            className="bg-black/40 backdrop-blur-sm rounded-xl p-6 sm:p-8 border border-white/10 shadow-[0_0_50px_-12px_rgba(147,51,234,0.2)]"
+          >
             <form className="grid gap-6">
               <div className="grid sm:grid-cols-2 gap-6">
                 <div className="grid gap-2">
@@ -504,5 +525,5 @@ export default function HomePageContent() {
         </div>
       </motion.footer>
     </div>
-  );
+  )
 }

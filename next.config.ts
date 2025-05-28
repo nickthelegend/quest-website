@@ -8,6 +8,9 @@ const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  images: {
+    domains: ['www.einpresswire.com','hebbkx1anhila5yf.public.blob.vercel-storage.com'],
+  },
 
 };
 

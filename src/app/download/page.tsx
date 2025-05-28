@@ -30,7 +30,7 @@ export default function DownloadPage() {
               {/* Google Play Button */}
               <a href="#" className="inline-block transform transition hover:scale-105">
                 <Image
-                  src="/placeholder.svg?height=60&width=200"
+                  src="https://www.einpresswire.com/image/large/741945/google-play-logo.png"
                   alt="Get it on Google Play"
                   width={200}
                   height={60}
@@ -41,7 +41,7 @@ export default function DownloadPage() {
               {/* App Store Button */}
               <a href="#" className="inline-block transform transition hover:scale-105">
                 <Image
-                  src="/placeholder.svg?height=60&width=200"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/favpng_d16a26518ea837f0daaf0058b0d5fda7-cmxGhSHbbX4xHPlb1dvet8CRuytOI5.png"
                   alt="Download on the App Store"
                   width={200}
                   height={60}
@@ -225,7 +225,7 @@ export default function DownloadPage() {
             <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
               <a href="#" className="inline-block transform transition hover:scale-105">
                 <Image
-                  src="/placeholder.svg?height=60&width=200"
+                  src="https://www.einpresswire.com/image/large/741945/google-play-logo.png"
                   alt="Get it on Google Play"
                   width={200}
                   height={60}
@@ -234,7 +234,7 @@ export default function DownloadPage() {
               </a>
               <a href="#" className="inline-block transform transition hover:scale-105">
                 <Image
-                  src="/placeholder.svg?height=60&width=200"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/favpng_d16a26518ea837f0daaf0058b0d5fda7-cmxGhSHbbX4xHPlb1dvet8CRuytOI5.png"
                   alt="Download on the App Store"
                   width={200}
                   height={60}
@@ -281,4 +281,3 @@ export default function DownloadPage() {
     </div>
   )
 }
-

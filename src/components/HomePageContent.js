@@ -161,7 +161,6 @@ export default function HomePageContent() {
               <video
                 autoPlay
                 muted
-                loop
                 playsInline
                 className="relative rounded-lg border border-white/10 shadow-2xl w-full h-auto"
               >

@@ -1,105 +1,143 @@
 /* components/MobileMockupsSection.module.css */
 
 .mobile-mockups-section {
-    padding: 80px 0;
-    background-color: transparent; /* Changed to transparent to let your page's background show through */
-    color: #ffffff;
-    text-align: center;
-    overflow: hidden; /* Important for scroll animations to prevent scrollbar issues */
-    /* Added margin-top to separate from previous section if needed, adjust as per your design */
-    margin-top: 100px;
-    position: relative; /* Ensure z-index works relative to its flow position */
-    z-index: 10; /* Bring it slightly above other background elements */
+  padding: 80px 0;
+  background-color: transparent;
+  color: #ffffff;
+  text-align: center;
+  overflow: hidden;
+  margin-top: 100px;
+  position: relative;
+  z-index: 10;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.title {
+  font-size: 3em;
+  margin-bottom: 10px;
+  color: #e0e0e0;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+.subtitle {
+  font-size: 1.2em;
+  margin-bottom: 60px;
+  color: #b0b0b0;
+  max-width: 768px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mockups-grid {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.mockup-item {
+  flex-shrink: 0;
+  width: 250px;
+  background-color: #1a1a1a;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 40px rgba(168, 85, 247, 0.3);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+/* Mobile-first responsive design */
+@media (max-width: 480px) {
+  .mobile-mockups-section {
+    padding: 40px 0;
+    margin-top: 60px;
   }
-  
+
   .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 16px;
   }
-  
+
   .title {
-    font-size: 3em;
-    margin-bottom: 10px;
-    color: #e0e0e0;
-    /* Applying similar text styles as your existing H2s if you like */
-    font-weight: 700; /* bold */
-    letter-spacing: -0.025em; /* tracking-tight */
+    font-size: 2em;
+    margin-bottom: 8px;
   }
-  
+
   .subtitle {
-    font-size: 1.2em;
-    margin-bottom: 60px;
-    color: #b0b0b0;
-    /* Applying similar text styles as your existing P tags */
-    max-width: 768px; /* Based on your existing text widths */
-    margin-left: auto;
-    margin-right: auto;
+    font-size: 0.9em;
+    margin-bottom: 40px;
+    padding: 0 10px;
   }
-  
+
   .mockups-grid {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 40px;
-    flex-wrap: wrap;
-  }
-  
-  .mockup-item {
-    flex-shrink: 0;
-    width: 250px; /* Base width for mockups */
-    background-color: #1a1a1a; /* Subtle background for mockups */
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 40px rgba(168, 85, 247, 0.3); /* Added a purple glow */
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    /* Added a subtle transition for static properties if needed, not directly for Framer Motion */
-    transition: transform 0.3s ease;
+    gap: 20px;
   }
-  
-  /* Responsive adjustments */
-  @media (max-width: 1024px) {
-    .mockups-grid {
-      gap: 30px;
-    }
-    .mockup-item {
-      width: 200px;
-    }
-    .title {
-      font-size: 2.5em;
-    }
+
+  .mockup-item {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    aspect-ratio: 1 / 2;
   }
-  
-  @media (max-width: 768px) {
-    .mobile-mockups-section {
-      padding: 60px 0;
-      margin-top: 80px;
-    }
-    .title {
-      font-size: 2.5em;
-    }
-    .subtitle {
-      font-size: 1em;
-      margin-bottom: 40px;
-    }
-    .mockups-grid {
-      gap: 20px;
-      flex-direction: column;
-      align-items: center;
-    }
-    .mockup-item {
-      width: 80%;
-      max-width: 300px;
-    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .mobile-mockups-section {
+    padding: 60px 0;
+    margin-top: 80px;
   }
-  
-  @media (max-width: 480px) {
-    .mobile-mockups-section h2 {
-      font-size: 2em;
-    }
-    .mockup-item {
-      width: 90%;
-    }
+
+  .title {
+    font-size: 2.5em;
   }
+
+  .subtitle {
+    font-size: 1em;
+    margin-bottom: 40px;
+  }
+
+  .mockups-grid {
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mockup-item {
+    width: 80%;
+    max-width: 300px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .mockups-grid {
+    gap: 30px;
+  }
+
+  .mockup-item {
+    width: 200px;
+  }
+
+  .title {
+    font-size: 2.5em;
+  }
+}
+
+@media (min-width: 1025px) {
+  .mockups-grid {
+    gap: 40px;
+  }
+
+  .mockup-item {
+    width: 250px;
+  }
+}

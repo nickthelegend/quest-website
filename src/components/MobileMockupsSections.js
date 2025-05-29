@@ -1,99 +1,109 @@
-"use client";
+"use client"
 
-import React, { useRef } from 'react';
-import { motion } from 'framer-motion';
-import Image from 'next/image';
-import styles from './MobileMockupsSection.module.css'; // Corrected CSS import
+import { useRef } from "react"
+import { motion } from "framer-motion"
+import Image from "next/image"
+import styles from "./MobileMockupsSection.module.css"
 
 const mockupImages = [
-  '/images/mockups/mockup1.png',
-  '/images/mockups/mockup2.png',
-  '/images/mockups/mockup3.png',
-  '/images/mockups/mockup4.png',
-  '/images/mockups/mockup5.png',
-];
-
-const MOCKUP_WIDTH = 250;
-const MOCKUP_HEIGHT = 500;
+  "/images/mockups/mockup1.png",
+  "/images/mockups/mockup2.png",
+  "/images/mockups/mockup3.png",
+  "/images/mockups/mockup4.png",
+  "/images/mockups/mockup5.png",
+]
 
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.15, // Delay between each child's animation start
-      delayChildren: 0.2,    // Initial delay before the first child starts
+      staggerChildren: 0.15,
+      delayChildren: 0.2,
     },
   },
-};
+}
 
 const mockupItemVariants = {
   hidden: (i) => {
-    // Elegant entrance from different subtle directions
-    const baseInitial = { opacity: 0, scale: 0.95 }; // Start slightly smaller and transparent
+    const baseInitial = { opacity: 0, scale: 0.95 }
 
-    if (i === 0) return { ...baseInitial, x: -60, y: 30, rotateZ: -5 }; // From slightly left-bottom
-    if (i === 1) return { ...baseInitial, x: -30, y: -60, rotateZ: 5 }; // From slightly left-top
-    if (i === 2) return { ...baseInitial, y: 40, rotateZ: 0 };         // From slightly below, no twist
-    if (i === 3) return { ...baseInitial, x: 30, y: -60, rotateZ: -5 }; // From slightly right-top
-    if (i === 4) return { ...baseInitial, x: 60, y: 30, rotateZ: 5 };  // From slightly right-bottom
+    if (i === 0) return { ...baseInitial, x: -60, y: 30, rotateZ: -5 }
+    if (i === 1) return { ...baseInitial, x: -30, y: -60, rotateZ: 5 }
+    if (i === 2) return { ...baseInitial, y: 40, rotateZ: 0 }
+    if (i === 3) return { ...baseInitial, x: 30, y: -60, rotateZ: -5 }
+    if (i === 4) return { ...baseInitial, x: 60, y: 30, rotateZ: 5 }
 
-    return baseInitial; // Fallback
+    return baseInitial
   },
   visible: {
-    x: 0, // Final position (pixels)
-    y: 0, // Final position (pixels)
+    x: 0,
+    y: 0,
     opacity: 1,
     scale: 1,
     rotateY: 0,
     rotateX: 0,
-    rotateZ: 0, // Ensure no rotation at the end
+    rotateZ: 0,
     transition: {
       type: "spring",
-      stiffness: 100, // Good for elegant feel
-      damping: 20,    // Good for elegant feel
+      stiffness: 100,
+      damping: 20,
       duration: 0.8,
     },
   },
-};
-
+}
 
 const MobileMockupsSections = () => {
-  const ref = useRef(null);
+  const ref = useRef(null)
 
   return (
-    <section ref={ref} className={styles['mobile-mockups-section']}>
+    <section ref={ref} className={styles["mobile-mockups-section"]}>
       <div className={styles.container}>
-        <h2 className={styles.title}>Experience the Game on Mobile</h2>
-        <p className={styles.subtitle}>immersive gameplay in your pocket</p>
+        <motion.h2
+          className={styles.title}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6 }}
+        >
+          Experience the Game on Mobile
+        </motion.h2>
+        <motion.p
+          className={styles.subtitle}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          Immersive gameplay in your pocket
+        </motion.p>
         <motion.div
-          className={styles['mockups-grid']}
+          className={styles["mockups-grid"]}
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
+          viewport={{ once: true, amount: 0.2 }}
         >
           {mockupImages.map((src, index) => (
-            <motion.div
-              key={index}
-              className={styles['mockup-item']}
-              variants={mockupItemVariants}
-              custom={index}
-            >
+            <motion.div key={index} className={styles["mockup-item"]} variants={mockupItemVariants} custom={index}>
               <Image
-                src={src}
+                src={src || "/placeholder.svg"}
                 alt={`Mobile Mockup ${index + 1}`}
-                width={MOCKUP_WIDTH}
-                height={MOCKUP_HEIGHT}
-                layout="responsive"
-                objectFit="contain"
+                width={250}
+                height={500}
+                style={{
+                  width: "100%",
+                  height: "auto",
+                  objectFit: "contain",
+                }}
+                priority={index < 2} // Prioritize loading first 2 images
               />
             </motion.div>
           ))}
         </motion.div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default MobileMockupsSections;
+export default MobileMockupsSections

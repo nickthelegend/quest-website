@@ -60,7 +60,7 @@ export default function DownloadPage() {
               <div className="hidden md:block transform -rotate-6 translate-x-10 -translate-y-5">
                 <div className="w-64 h-128 rounded-3xl overflow-hidden border-8 border-black bg-black">
                   <Image
-                    src="/placeholder.svg?height=550&width=260"
+                    src="/mockups/1.jpg?height=550&width=260"
                     alt="AlgoQuest Mobile App - Quests Screen"
                     width={260}
                     height={550}
@@ -73,7 +73,7 @@ export default function DownloadPage() {
               <div className="z-10 transform translate-y-0 scale-110">
                 <div className="w-72 h-144 rounded-3xl overflow-hidden border-8 border-black bg-black">
                   <Image
-                    src="/placeholder.svg?height=600&width=300"
+                    src="/mockups/2.jpg?height=600&width=300"
                     alt="AlgoQuest Mobile App - Home Screen"
                     width={300}
                     height={600}
@@ -86,7 +86,7 @@ export default function DownloadPage() {
               <div className="hidden md:block transform rotate-6 -translate-x-10 -translate-y-5">
                 <div className="w-64 h-128 rounded-3xl overflow-hidden border-8 border-black bg-black">
                   <Image
-                    src="/placeholder.svg?height=550&width=260"
+                    src="/mockups/3.jpg?height=550&width=260"
                     alt="AlgoQuest Mobile App - NFT Collection"
                     width={260}
                     height={550}

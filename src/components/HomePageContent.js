@@ -51,21 +51,13 @@ export default function HomePageContent() {
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/40 border-b border-white/10"
+        className="fixed top-0 left-0 right-0 z-50 bg-black border-b border-white/10"
       >
         <div className="mx-auto px-4">
           <div className="flex items-center justify-between h-16 my-2">
             <motion.div variants={itemVariants} className="flex items-center gap-16">
               <Link href="/" className="flex items-center group">
-                <motion.div
-                  initial={{ rotate: 0 }}
-                  animate={{ rotate: 360 }}
-                  transition={{ duration: 1.5, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
-                  className="w-10 h-10 rounded-xl bg-purple-600 flex items-center justify-center group-hover:bg-purple-500 transition-colors"
-                >
-                  <div className="w-3 h-3 rounded-full bg-white" />
-                </motion.div>
-                <span className="ml-2 text-white font-bold text-lg">AlgoQuest</span>
+                <Image src="/logoname.png" alt="AlgoQuest Logo" width={120} height={40} className="h-10 w-auto" />
               </Link>
               <div className="hidden md:flex items-center space-x-8">
                 <Link href="/features">

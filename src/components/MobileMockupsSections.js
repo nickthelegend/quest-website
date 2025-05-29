@@ -6,11 +6,11 @@ import Image from "next/image"
 import styles from "./MobileMockupsSection.module.css"
 
 const mockupImages = [
-  "/images/mockups/mockup1.png",
-  "/images/mockups/mockup2.png",
-  "/images/mockups/mockup3.png",
-  "/images/mockups/mockup4.png",
-  "/images/mockups/mockup5.png",
+  "/mockups/mock1.jpg",
+  "/mockups/mock5.jpg",
+  "/mockups/mock6.jpg",
+  "/mockups/mock7.jpg",
+  "/mockups/mock8.jspg",
 ]
 
 const containerVariants = {

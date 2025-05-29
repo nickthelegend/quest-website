@@ -16,7 +16,7 @@ export default function DocsPage() {
       </div>
 
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/40 border-b border-white/10">
+      {/* <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/40 border-b border-white/10">
         <div className="mx-auto px-4">
           <div className="flex items-center justify-between h-16 my-2">
             <div className="flex items-center gap-16">
@@ -56,7 +56,7 @@ export default function DocsPage() {
             </Link>
           </div>
         </div>
-      </nav>
+      </nav> */}
 
       {/* Main Content */}
       <div className="relative pt-32 pb-0 sm:pt-40">

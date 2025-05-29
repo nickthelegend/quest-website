@@ -1,6 +1,6 @@
 "use client"
 
-import { useRef } from "react"
+import { useRef, useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import Image from "next/image"
 import styles from "./MobileMockupsSection.module.css"
@@ -55,6 +55,41 @@ const mockupItemVariants = {
 
 const MobileMockupsSections = () => {
   const ref = useRef(null)
+  const [screenSize, setScreenSize] = useState("desktop")
+
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth
+      if (width <= 480) {
+        setScreenSize("mobile")
+      } else if (width <= 768) {
+        setScreenSize("tablet")
+      } else if (width <= 1024) {
+        setScreenSize("small-desktop")
+      } else {
+        setScreenSize("desktop")
+      }
+    }
+
+    handleResize()
+    window.addEventListener("resize", handleResize)
+    return () => window.removeEventListener("resize", handleResize)
+  }, [])
+
+  const getVisibleMockups = () => {
+    switch (screenSize) {
+      case "mobile":
+        return mockupImages.slice(0, 1) // Show only 1 mockup
+      case "tablet":
+        return mockupImages.slice(0, 2) // Show 2 mockups
+      case "small-desktop":
+        return mockupImages.slice(0, 3) // Show 3 mockups
+      default:
+        return mockupImages // Show all 5 mockups
+    }
+  }
+
+  const visibleMockups = getVisibleMockups()
 
   return (
     <section ref={ref} className={styles["mobile-mockups-section"]}>
@@ -84,7 +119,7 @@ const MobileMockupsSections = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
-          {mockupImages.map((src, index) => (
+          {visibleMockups.map((src, index) => (
             <motion.div key={index} className={styles["mockup-item"]} variants={mockupItemVariants} custom={index}>
               <Image
                 src={src || "/placeholder.svg"}
@@ -96,7 +131,7 @@ const MobileMockupsSections = () => {
                   height: "auto",
                   objectFit: "contain",
                 }}
-                priority={index < 2} // Prioritize loading first 2 images
+                priority={index < 2}
               />
             </motion.div>
           ))}

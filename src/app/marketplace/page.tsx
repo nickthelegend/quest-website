@@ -1,5 +1,4 @@
 import Link from "next/link"
-import Image from "next/image"
 import { Button } from "@/components/ui/button"
 
 export default function MarketplacePage() {
@@ -78,186 +77,22 @@ export default function MarketplacePage() {
         <div className="mb-12">
           <h2 className="text-3xl font-bold text-white mb-8">All Beasts</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {/* Beast 1 */}
+            {/* Beast 1 - Fiery Golden */}
             <div className="relative group transition-transform duration-300 hover:scale-105">
               <div className="absolute inset-0 bg-purple-600/20 blur-xl group-hover:bg-purple-600/30 transition-colors duration-300" />
               <div className="relative bg-black/40 backdrop-blur-sm rounded-2xl p-4 border border-purple-500/20">
                 <div className="mb-3 relative aspect-square overflow-hidden rounded-xl">
-                  <Image
-                    src="/placeholder.svg?height=300&width=300"
-                    alt="Algo Dragon"
-                    width={300}
-                    height={300}
-                    className="object-cover"
+                  <img
+                    src="https://gateway.pinata.cloud/ipfs/QmQByZt2PvtfffBq3PBM8kZE5ZuMnHBMp4jeBs3G4o4BLb"
+                    alt="Fiery Golden"
+                    className="w-full h-full object-cover"
                   />
                   <div className="absolute top-2 right-2 bg-purple-600 text-white text-xs px-2 py-1 rounded-full">
                     Legendary
                   </div>
                 </div>
-                <h3 className="text-lg font-bold text-white">Algo Dragon</h3>
-                <p className="text-gray-400 text-sm mb-3">Algorithm Master • Fire Type</p>
-                <div className="flex justify-between items-center">
-                  <span className="text-purple-400 font-bold">1500 QT</span>
-                  <Button size="sm" className="bg-purple-600 hover:bg-purple-500 text-xs">
-                    Buy Now
-                  </Button>
-                </div>
-              </div>
-            </div>
-
-            {/* Beast 2 */}
-            <div className="relative group transition-transform duration-300 hover:scale-105">
-              <div className="absolute inset-0 bg-purple-600/20 blur-xl group-hover:bg-purple-600/30 transition-colors duration-300" />
-              <div className="relative bg-black/40 backdrop-blur-sm rounded-2xl p-4 border border-purple-500/20">
-                <div className="mb-3 relative aspect-square overflow-hidden rounded-xl">
-                  <Image
-                    src="/placeholder.svg?height=300&width=300"
-                    alt="Recursion Fox"
-                    width={300}
-                    height={300}
-                    className="object-cover"
-                  />
-                  <div className="absolute top-2 right-2 bg-purple-700/70 text-white text-xs px-2 py-1 rounded-full">
-                    Uncommon
-                  </div>
-                </div>
-                <h3 className="text-lg font-bold text-white">Recursion Fox</h3>
-                <p className="text-gray-400 text-sm mb-3">Loop Expert • Air Type</p>
-                <div className="flex justify-between items-center">
-                  <span className="text-purple-400 font-bold">800 QT</span>
-                  <Button size="sm" className="bg-purple-600 hover:bg-purple-500 text-xs">
-                    Buy Now
-                  </Button>
-                </div>
-              </div>
-            </div>
-
-            {/* Beast 3 */}
-            <div className="relative group transition-transform duration-300 hover:scale-105">
-              <div className="absolute inset-0 bg-purple-600/20 blur-xl group-hover:bg-purple-600/30 transition-colors duration-300" />
-              <div className="relative bg-black/40 backdrop-blur-sm rounded-2xl p-4 border border-purple-500/20">
-                <div className="mb-3 relative aspect-square overflow-hidden rounded-xl">
-                  <Image
-                    src="/placeholder.svg?height=300&width=300"
-                    alt="Binary Wolf"
-                    width={300}
-                    height={300}
-                    className="object-cover"
-                  />
-                  <div className="absolute top-2 right-2 bg-purple-600/90 text-white text-xs px-2 py-1 rounded-full">
-                    Rare
-                  </div>
-                </div>
-                <h3 className="text-lg font-bold text-white">Binary Wolf</h3>
-                <p className="text-gray-400 text-sm mb-3">Bit Manipulator • Earth Type</p>
-                <div className="flex justify-between items-center">
-                  <span className="text-purple-400 font-bold">1200 QT</span>
-                  <Button size="sm" className="bg-purple-600 hover:bg-purple-500 text-xs">
-                    Buy Now
-                  </Button>
-                </div>
-              </div>
-            </div>
-
-            {/* Beast 4 */}
-            <div className="relative group transition-transform duration-300 hover:scale-105">
-              <div className="absolute inset-0 bg-purple-600/20 blur-xl group-hover:bg-purple-600/30 transition-colors duration-300" />
-              <div className="relative bg-black/40 backdrop-blur-sm rounded-2xl p-4 border border-purple-500/20">
-                <div className="mb-3 relative aspect-square overflow-hidden rounded-xl">
-                  <Image
-                    src="/placeholder.svg?height=300&width=300"
-                    alt="Heap Turtle"
-                    width={300}
-                    height={300}
-                    className="object-cover"
-                  />
-                  <div className="absolute top-2 right-2 bg-purple-800/50 text-white text-xs px-2 py-1 rounded-full">
-                    Common
-                  </div>
-                </div>
-                <h3 className="text-lg font-bold text-white">Heap Turtle</h3>
-                <p className="text-gray-400 text-sm mb-3">Memory Manager • Water Type</p>
-                <div className="flex justify-between items-center">
-                  <span className="text-purple-400 font-bold">500 QT</span>
-                  <Button size="sm" className="bg-purple-600 hover:bg-purple-500 text-xs">
-                    Buy Now
-                  </Button>
-                </div>
-              </div>
-            </div>
-
-            {/* Beast 5 */}
-            <div className="relative group transition-transform duration-300 hover:scale-105">
-              <div className="absolute inset-0 bg-purple-600/20 blur-xl group-hover:bg-purple-600/30 transition-colors duration-300" />
-              <div className="relative bg-black/40 backdrop-blur-sm rounded-2xl p-4 border border-purple-500/20">
-                <div className="mb-3 relative aspect-square overflow-hidden rounded-xl">
-                  <Image
-                    src="/placeholder.svg?height=300&width=300"
-                    alt="Graph Panther"
-                    width={300}
-                    height={300}
-                    className="object-cover"
-                  />
-                  <div className="absolute top-2 right-2 bg-purple-600/90 text-white text-xs px-2 py-1 rounded-full">
-                    Rare
-                  </div>
-                </div>
-                <h3 className="text-lg font-bold text-white">Graph Panther</h3>
-                <p className="text-gray-400 text-sm mb-3">Path Finder • Earth Type</p>
-                <div className="flex justify-between items-center">
-                  <span className="text-purple-400 font-bold">1000 QT</span>
-                  <Button size="sm" className="bg-purple-600 hover:bg-purple-500 text-xs">
-                    Buy Now
-                  </Button>
-                </div>
-              </div>
-            </div>
-
-            {/* Beast 6 */}
-            <div className="relative group transition-transform duration-300 hover:scale-105">
-              <div className="absolute inset-0 bg-purple-600/20 blur-xl group-hover:bg-purple-600/30 transition-colors duration-300" />
-              <div className="relative bg-black/40 backdrop-blur-sm rounded-2xl p-4 border border-purple-500/20">
-                <div className="mb-3 relative aspect-square overflow-hidden rounded-xl">
-                  <Image
-                    src="/placeholder.svg?height=300&width=300"
-                    alt="Hash Eagle"
-                    width={300}
-                    height={300}
-                    className="object-cover"
-                  />
-                  <div className="absolute top-2 right-2 bg-purple-700/70 text-white text-xs px-2 py-1 rounded-full">
-                    Uncommon
-                  </div>
-                </div>
-                <h3 className="text-lg font-bold text-white">Hash Eagle</h3>
-                <p className="text-gray-400 text-sm mb-3">Fast Lookup • Air Type</p>
-                <div className="flex justify-between items-center">
-                  <span className="text-purple-400 font-bold">750 QT</span>
-                  <Button size="sm" className="bg-purple-600 hover:bg-purple-500 text-xs">
-                    Buy Now
-                  </Button>
-                </div>
-              </div>
-            </div>
-
-            {/* Beast 7 */}
-            <div className="relative group transition-transform duration-300 hover:scale-105">
-              <div className="absolute inset-0 bg-purple-600/20 blur-xl group-hover:bg-purple-600/30 transition-colors duration-300" />
-              <div className="relative bg-black/40 backdrop-blur-sm rounded-2xl p-4 border border-purple-500/20">
-                <div className="mb-3 relative aspect-square overflow-hidden rounded-xl">
-                  <Image
-                    src="/placeholder.svg?height=300&width=300"
-                    alt="Quantum Stag"
-                    width={300}
-                    height={300}
-                    className="object-cover"
-                  />
-                  <div className="absolute top-2 right-2 bg-purple-600 text-white text-xs px-2 py-1 rounded-full">
-                    Legendary
-                  </div>
-                </div>
-                <h3 className="text-lg font-bold text-white">Quantum Stag</h3>
-                <p className="text-gray-400 text-sm mb-3">Parallel Processor • Fire Type</p>
+                <h3 className="text-lg font-bold text-white">Fiery Golden</h3>
+                <p className="text-gray-400 text-sm mb-3">Fire Master • Legendary Type</p>
                 <div className="flex justify-between items-center">
                   <span className="text-purple-400 font-bold">1800 QT</span>
                   <Button size="sm" className="bg-purple-600 hover:bg-purple-500 text-xs">
@@ -267,26 +102,199 @@ export default function MarketplacePage() {
               </div>
             </div>
 
-            {/* Beast 8 */}
+            {/* Beast 2 - Nivesh */}
             <div className="relative group transition-transform duration-300 hover:scale-105">
               <div className="absolute inset-0 bg-purple-600/20 blur-xl group-hover:bg-purple-600/30 transition-colors duration-300" />
               <div className="relative bg-black/40 backdrop-blur-sm rounded-2xl p-4 border border-purple-500/20">
                 <div className="mb-3 relative aspect-square overflow-hidden rounded-xl">
-                  <Image
-                    src="/placeholder.svg?height=300&width=300"
-                    alt="Sort Squid"
-                    width={300}
-                    height={300}
-                    className="object-cover"
+                  <img
+                    src="https://gateway.pinata.cloud/ipfs/QmePPStZjEaKfAuT9J1XaPULie78WzVPbMUXKtRZ93JVdu"
+                    alt="Nivesh"
+                    className="w-full h-full object-cover"
                   />
-                  <div className="absolute top-2 right-2 bg-purple-800/50 text-white text-xs px-2 py-1 rounded-full">
+                  <div className="absolute top-2 right-2 bg-purple-600/90 text-white text-xs px-2 py-1 rounded-full">
+                    Rare
+                  </div>
+                </div>
+                <h3 className="text-lg font-bold text-white">Nivesh</h3>
+                <p className="text-gray-400 text-sm mb-3">Investment Beast • Earth Type</p>
+                <div className="flex justify-between items-center">
+                  <span className="text-purple-400 font-bold">1200 QT</span>
+                  <Button size="sm" className="bg-purple-600 hover:bg-purple-500 text-xs">
+                    Buy Now
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* Beast 3 - Water Huriken */}
+            <div className="relative group transition-transform duration-300 hover:scale-105">
+              <div className="absolute inset-0 bg-purple-600/20 blur-xl group-hover:bg-purple-600/30 transition-colors duration-300" />
+              <div className="relative bg-black/40 backdrop-blur-sm rounded-2xl p-4 border border-purple-500/20">
+                <div className="mb-3 relative aspect-square overflow-hidden rounded-xl">
+                  <img
+                    src="https://gateway.pinata.cloud/ipfs/QmPELcPFozaECUiowGGDPBH4BUtott71yzua9PturwvcTq"
+                    alt="Water Huriken"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute top-2 right-2 bg-blue-600/90 text-white text-xs px-2 py-1 rounded-full">
+                    Rare
+                  </div>
+                </div>
+                <h3 className="text-lg font-bold text-white">Water Huriken</h3>
+                <p className="text-gray-400 text-sm mb-3">Ninja Warrior • Water Type</p>
+                <div className="flex justify-between items-center">
+                  <span className="text-purple-400 font-bold">1100 QT</span>
+                  <Button size="sm" className="bg-purple-600 hover:bg-purple-500 text-xs">
+                    Buy Now
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* Beast 4 - Red Dragon */}
+            <div className="relative group transition-transform duration-300 hover:scale-105">
+              <div className="absolute inset-0 bg-purple-600/20 blur-xl group-hover:bg-purple-600/30 transition-colors duration-300" />
+              <div className="relative bg-black/40 backdrop-blur-sm rounded-2xl p-4 border border-purple-500/20">
+                <div className="mb-3 relative aspect-square overflow-hidden rounded-xl">
+                  <img
+                    src="https://gateway.pinata.cloud/ipfs/QmRTrTisZNprf38nSDEPbH1xq99SBhZEFAqiNSLLFqTpBr"
+                    alt="Red Dragon"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute top-2 right-2 bg-red-600/90 text-white text-xs px-2 py-1 rounded-full">
+                    Epic
+                  </div>
+                </div>
+                <h3 className="text-lg font-bold text-white">Red Dragon</h3>
+                <p className="text-gray-400 text-sm mb-3">Flame Guardian • Fire Type</p>
+                <div className="flex justify-between items-center">
+                  <span className="text-purple-400 font-bold">1500 QT</span>
+                  <Button size="sm" className="bg-purple-600 hover:bg-purple-500 text-xs">
+                    Buy Now
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* Beast 5 - RED DRAGON (Variant) */}
+            <div className="relative group transition-transform duration-300 hover:scale-105">
+              <div className="absolute inset-0 bg-purple-600/20 blur-xl group-hover:bg-purple-600/30 transition-colors duration-300" />
+              <div className="relative bg-black/40 backdrop-blur-sm rounded-2xl p-4 border border-purple-500/20">
+                <div className="mb-3 relative aspect-square overflow-hidden rounded-xl">
+                  <img
+                    src="https://gateway.pinata.cloud/ipfs/Qma3rMQe63whdRjddNEgqZ94dkzSeXeukC6xpM8jgUamig"
+                    alt="RED DRAGON"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute top-2 right-2 bg-purple-600 text-white text-xs px-2 py-1 rounded-full">
+                    Legendary
+                  </div>
+                </div>
+                <h3 className="text-lg font-bold text-white">RED DRAGON</h3>
+                <p className="text-gray-400 text-sm mb-3">Ancient Flame • Fire Type</p>
+                <div className="flex justify-between items-center">
+                  <span className="text-purple-400 font-bold">2000 QT</span>
+                  <Button size="sm" className="bg-purple-600 hover:bg-purple-500 text-xs">
+                    Buy Now
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* Beast 6 - Godzilla Beast */}
+            <div className="relative group transition-transform duration-300 hover:scale-105">
+              <div className="absolute inset-0 bg-purple-600/20 blur-xl group-hover:bg-purple-600/30 transition-colors duration-300" />
+              <div className="relative bg-black/40 backdrop-blur-sm rounded-2xl p-4 border border-purple-500/20">
+                <div className="mb-3 relative aspect-square overflow-hidden rounded-xl">
+                  <img
+                    src="https://gateway.pinata.cloud/ipfs/QmX8iDMdugvyZ6x87KWLqhHfM7DcPJmew11qZYU7yjg3kB"
+                    alt="Godzilla Beast"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute top-2 right-2 bg-green-600/90 text-white text-xs px-2 py-1 rounded-full">
+                    Mythic
+                  </div>
+                </div>
+                <h3 className="text-lg font-bold text-white">Godzilla Beast</h3>
+                <p className="text-gray-400 text-sm mb-3">Kaiju King • Earth Type</p>
+                <div className="flex justify-between items-center">
+                  <span className="text-purple-400 font-bold">2500 QT</span>
+                  <Button size="sm" className="bg-purple-600 hover:bg-purple-500 text-xs">
+                    Buy Now
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* Beast 7 - Dragon Zilla */}
+            <div className="relative group transition-transform duration-300 hover:scale-105">
+              <div className="absolute inset-0 bg-purple-600/20 blur-xl group-hover:bg-purple-600/30 transition-colors duration-300" />
+              <div className="relative bg-black/40 backdrop-blur-sm rounded-2xl p-4 border border-purple-500/20">
+                <div className="mb-3 relative aspect-square overflow-hidden rounded-xl">
+                  <img
+                    src="https://gateway.pinata.cloud/ipfs/QmcFDyKNpY4GJ1dytTHcXvUkMh7N4E4E5sNRExc6XeypCC"
+                    alt="Dragon Zilla"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute top-2 right-2 bg-purple-600 text-white text-xs px-2 py-1 rounded-full">
+                    Legendary
+                  </div>
+                </div>
+                <h3 className="text-lg font-bold text-white">Dragon Zilla</h3>
+                <p className="text-gray-400 text-sm mb-3">Hybrid Monster • Fire Type</p>
+                <div className="flex justify-between items-center">
+                  <span className="text-purple-400 font-bold">1900 QT</span>
+                  <Button size="sm" className="bg-purple-600 hover:bg-purple-500 text-xs">
+                    Buy Now
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* Beast 8 - Fire Dragon */}
+            <div className="relative group transition-transform duration-300 hover:scale-105">
+              <div className="absolute inset-0 bg-purple-600/20 blur-xl group-hover:bg-purple-600/30 transition-colors duration-300" />
+              <div className="relative bg-black/40 backdrop-blur-sm rounded-2xl p-4 border border-purple-500/20">
+                <div className="mb-3 relative aspect-square overflow-hidden rounded-xl">
+                  <img
+                    src="https://gateway.pinata.cloud/ipfs/Qmbf4mnHns6cyx9etbazHiSHZjEQywgzLNaVmZALArucEL"
+                    alt="Fire Dragon"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute top-2 right-2 bg-red-600/90 text-white text-xs px-2 py-1 rounded-full">
+                    Epic
+                  </div>
+                </div>
+                <h3 className="text-lg font-bold text-white">Fire Dragon</h3>
+                <p className="text-gray-400 text-sm mb-3">Inferno Lord • Fire Type</p>
+                <div className="flex justify-between items-center">
+                  <span className="text-purple-400 font-bold">1400 QT</span>
+                  <Button size="sm" className="bg-purple-600 hover:bg-purple-500 text-xs">
+                    Buy Now
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* Beast 9 - Sad */}
+            <div className="relative group transition-transform duration-300 hover:scale-105">
+              <div className="absolute inset-0 bg-purple-600/20 blur-xl group-hover:bg-purple-600/30 transition-colors duration-300" />
+              <div className="relative bg-black/40 backdrop-blur-sm rounded-2xl p-4 border border-purple-500/20">
+                <div className="mb-3 relative aspect-square overflow-hidden rounded-xl">
+                  <img
+                    src="https://gateway.pinata.cloud/ipfs/QmQdb3rYBj3NPZ3aNhmYgccoX42Doji5KESZ9hwRADHL6A"
+                    alt="Sad"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute top-2 right-2 bg-gray-600/90 text-white text-xs px-2 py-1 rounded-full">
                     Common
                   </div>
                 </div>
-                <h3 className="text-lg font-bold text-white">Sort Squid</h3>
-                <p className="text-gray-400 text-sm mb-3">Array Organizer • Water Type</p>
+                <h3 className="text-lg font-bold text-white">Sad</h3>
+                <p className="text-gray-400 text-sm mb-3">Melancholy Spirit • Dark Type</p>
                 <div className="flex justify-between items-center">
-                  <span className="text-purple-400 font-bold">550 QT</span>
+                  <span className="text-purple-400 font-bold">400 QT</span>
                   <Button size="sm" className="bg-purple-600 hover:bg-purple-500 text-xs">
                     Buy Now
                   </Button>
@@ -429,4 +437,3 @@ export default function MarketplacePage() {
     </div>
   )
 }
-

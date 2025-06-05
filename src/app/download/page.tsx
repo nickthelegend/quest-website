@@ -1,6 +1,5 @@
-import Link from "next/link"
 import Image from "next/image"
-import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 export default function DownloadPage() {
   return (
@@ -30,7 +29,7 @@ export default function DownloadPage() {
               {/* Google Play Button */}
               <a href="#" className="inline-block transform transition hover:scale-105">
                 <Image
-                  src="https://www.einpresswire.com/image/large/741945/google-play-logo.png"
+                    src="https://www.einpresswire.com/image/large/741945/google-play-logo.png"
                   alt="Get it on Google Play"
                   width={200}
                   height={60}
